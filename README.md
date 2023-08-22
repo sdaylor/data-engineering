@@ -57,3 +57,24 @@ curl --location 'http://127.0.0.1:5000/' \
     "prediction_count": 10
 }'
 ```
+It returns the following payload, which includes the original request parameters and key/value pairs for the inferences:
+```json
+{
+    "parameters": {
+        "image_url": "https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg",
+        "prediction_count": 10
+    },
+    "predictions": {
+        "alp": 99.8894,
+        "cliff": 0.002,
+        "dogsled": 0.0007,
+        "marmot": 0.0009,
+        "mountain tent": 0.0678,
+        "recreational vehicle": 0.0008,
+        "ski": 0.0019,
+        "snowmobile": 0.0033,
+        "valley": 0.0049,
+        "volcano": 0.0087
+    }
+}
+```
